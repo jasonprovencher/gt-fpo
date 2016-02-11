@@ -1,0 +1,89 @@
+html {
+  height: 100%; }
+
+body {
+  font-size: 13px;
+  line-height: 1.4;
+  background: #ceced7;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; }
+
+a {
+  text-decoration: none; }
+
+*:hover {
+  transition: .1s; }
+
+.heading1 {
+  font-size: 23px; }
+
+.subhead {
+  font-size: 12px;
+  font-weight: 300; }
+
+#header {
+  background: #34343f;
+  height: 60px;
+  font-weight: 400; }
+  #header .menu {
+    margin: 0px 10px 0px 5px; }
+    #header .menu a {
+      color: white;
+      margin: 0px 10px; }
+      #header .menu a i {
+        margin: 0 0 0 5px;
+        opacity: .5; }
+  #header .logo {
+    width: 90px; }
+
+.profile {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url(/app/resources/images/profile.jpg) red no-repeat center;
+  background-size: cover;
+  position: relative; }
+  .profile i {
+    position: absolute;
+    bottom: -4px;
+    right: -8px; }
+
+#pipeline-nav {
+  height: 100px;
+  background: #3c3c47;
+  color: white; }
+  #pipeline-nav .icon {
+    background: #2f2f39;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px; }
+  #pipeline-nav a {
+    color: #7a7a92;
+    font-size: 16px;
+    margin: 0px 15px;
+    padding-bottom: 3px; }
+    #pipeline-nav a:hover {
+      color: white; }
+    #pipeline-nav a.active {
+      color: #ffffff;
+      box-sizing: border-box;
+      border-bottom: 1px solid #67c29e; }
+
+#area-graph {
+  background: linear-gradient(to top, #009bcc, #009bcc); }
+  #area-graph .graph {
+    height: 360px; }
+  #area-graph .y-axis {
+    height: 40px;
+    width: 100%;
+    background: #00a7db;
+    color: white; }
+    #area-graph .y-axis div {
+      margin: 0px 3.2%; }
+  #area-graph #call-outs {
+    height: 100px; }
+
+/*# sourceMappingURL=proto.css.map */

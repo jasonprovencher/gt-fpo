@@ -1,0 +1,126 @@
+html {
+  height:100%;
+}
+
+body {
+  font-size:13px;
+  line-height:1.4;
+  background:lighten(#34343f, 60%);
+  height:100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration:none;
+}
+
+*:hover {
+  transition:.1s;
+}
+
+.heading1 {
+  font-size:23px;
+}
+
+.heading2 {
+
+}
+
+.subhead {
+  font-size:12px;
+  font-weight: 300;
+}
+
+//Over-rides for testing
+.md-card {
+
+}
+
+
+
+#header {
+  background:#34343f;
+  height:60px;
+  font-weight:400;
+  .menu {
+    margin:0px 10px 0px 5px;
+    a {
+      color:white;
+      margin:0px 10px;
+      i {
+        margin:0 0 0 5px;
+        opacity: .5;
+      }
+    }
+  }
+  .logo {
+    width:90px;
+  }
+}
+
+
+
+.profile {
+  display:block;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:url(/app/resources/images/profile.jpg) red no-repeat center;
+  background-size:cover;
+  position:relative;
+  i {
+    position:absolute;
+    bottom:-4px;
+    right:-8px;
+  }
+}
+
+
+#pipeline-nav {
+  height:100px;
+  background:#3c3c47;
+  color:white;
+  .icon {
+    background:darken(#34343f, 2%);
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    margin-right:10px;
+  }
+  a {
+    color:lighten(#34343f, 30%);
+    font-size: 16px;
+    margin:0px 15px;
+    padding-bottom:3px;
+    &:hover {
+      color:white;
+    }
+    &.active {
+      color:#ffffff;
+      box-sizing: border-box;
+      border-bottom:1px solid #67c29e;
+    }
+  }
+}
+
+#area-graph {
+  background: linear-gradient(to top, #009bcc, #009bcc);
+  .graph {
+    height:360px;
+  }
+  .y-axis {
+    height:40px;
+    width: 100%;
+    background:lighten(#009bcc, 3%);
+    color:white;
+    div {
+      margin:0px 3.2%;
+    }
+
+  }
+  #call-outs {
+    //background:lighten(#009bcc, 4%);
+    height:100px;
+  }
+}
