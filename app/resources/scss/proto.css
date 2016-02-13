@@ -1,11 +1,10 @@
 html {
-  height: 100%; }
+  background: #ceced7; }
 
 body {
   font-size: 13px;
   line-height: 1.4;
   background: #ceced7;
-  height: 100%;
   font-family: 'Roboto', sans-serif;
   font-weight: 300; }
 
@@ -25,7 +24,8 @@ a {
 #header {
   background: #34343f;
   height: 60px;
-  font-weight: 400; }
+  font-weight: 400;
+  overflow: hidden; }
   #header .menu {
     margin: 0px 10px 0px 5px; }
     #header .menu a {
@@ -53,7 +53,10 @@ a {
 #pipeline-nav {
   height: 100px;
   background: #3c3c47;
-  color: white; }
+  color: white;
+  position: relative;
+  z-index: 100;
+  overflow: visible; }
   #pipeline-nav .icon {
     background: #2f2f39;
     width: 50px;
@@ -70,20 +73,133 @@ a {
     #pipeline-nav a.active {
       color: #ffffff;
       box-sizing: border-box;
-      border-bottom: 1px solid #67c29e; }
+      border-bottom: 1px solid #67c29e;
+      font-weight: 400; }
+  #pipeline-nav .action-button {
+    position: relative;
+    top: 50px; }
 
 #area-graph {
-  background: linear-gradient(to top, #009bcc, #009bcc); }
+  background: linear-gradient(to top, #009bcc, #00a7db);
+  position: relative;
+  z-index: 0; }
   #area-graph .graph {
     height: 360px; }
   #area-graph .y-axis {
     height: 40px;
     width: 100%;
-    background: #00a7db;
+    background: #00b6f0;
     color: white; }
-    #area-graph .y-axis div {
-      margin: 0px 3.2%; }
+    #area-graph .y-axis > div {
+      margin: -15px 3.2% 0 3.2%;
+      text-align: center;
+      font-weight: 400; }
+      #area-graph .y-axis > div:before {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        background: #1ac8ff;
+        position: relative; }
   #area-graph #call-outs {
-    height: 100px; }
+    background: #008cb8;
+    padding: 0px 150px;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.2; }
+    #area-graph #call-outs > div {
+      border-left: 1px #00aee6 solid;
+      padding: 15px 0px; }
+      #area-graph #call-outs > div:last-child {
+        border-right: 1px #00aee6 solid; }
+      #area-graph #call-outs > div div {
+        font-weight: 400;
+        font-size: 40px; }
+
+.action-button a {
+  color: #ffffff; }
+
+.demo {
+  background: red;
+  height: 200px; }
+  .demo div {
+    background: blue; }
+    .demo div div {
+      background: yellow; }
+
+.color-palette div {
+  height: 50px;
+  color: white; }
+
+.color_gray_darks--light {
+  background-color: #4b4b5b; }
+.color_gray_darks--lighter {
+  background-color: #40404d; }
+.color_gray_darks--default {
+  background-color: #34343f; }
+.color_gray_darks--darker {
+  background-color: #282831; }
+.color_gray_darks--dark {
+  background-color: #1d1d23; }
+
+.color_blue--light {
+  background-color: #00c2ff; }
+.color_blue--lighter {
+  background-color: #00aee6; }
+.color_blue--default {
+  background-color: #009bcc; }
+.color_blue--darker {
+  background-color: #0088b3; }
+.color_blue--dark {
+  background-color: #007499; }
+
+.color_teal--light {
+  background-color: #8bd1b5; }
+.color_teal--lighter {
+  background-color: #79c9aa; }
+.color_teal--default {
+  background-color: #67c29e; }
+.color_teal--darker {
+  background-color: #55bb92; }
+.color_teal--dark {
+  background-color: #46b086; }
+
+.color_gray_lights--light {
+  background-color: #b3b2b9; }
+.color_gray_lights--lighter {
+  background-color: #a6a4ad; }
+.color_gray_lights--default {
+  background-color: #9997A1; }
+.color_gray_lights--darker {
+  background-color: #8c8a95; }
+.color_gray_lights--dark {
+  background-color: #7f7c89; }
+
+.color_orange--light {
+  background-color: #f3b665; }
+.color_orange--lighter {
+  background-color: #f1ab4e; }
+.color_orange--default {
+  background-color: #efa036; }
+.color_orange--darker {
+  background-color: #ed951e; }
+.color_orange--dark {
+  background-color: #e08812; }
+
+.color_black--default {
+  background-color: #1d1d23;
+  color: white; }
+
+.color_text--default {
+  background-color: #282831;
+  color: white; }
+
+.color_white--default {
+  background-color: #ffffff; }
+
+.color_background--default {
+  background: #ceced7; }
 
 /*# sourceMappingURL=proto.css.map */

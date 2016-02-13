@@ -1,12 +1,18 @@
+$primaryBlue: #009bcc;
+$primaryTeal: #67c29e;
+$orange: #efa036;
+$darkGray: #34343f;
+$lightGray: #9997A1;
+$white: #ffffff;
+
 html {
-  height:100%;
+  background:lighten($darkGray, 60%);
 }
 
 body {
   font-size:13px;
   line-height:1.4;
-  background:lighten(#34343f, 60%);
-  height:100%;
+  background:lighten($darkGray, 60%);
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
@@ -43,6 +49,7 @@ a {
   background:#34343f;
   height:60px;
   font-weight:400;
+  overflow:hidden;
   .menu {
     margin:0px 10px 0px 5px;
     a {
@@ -81,6 +88,9 @@ a {
   height:100px;
   background:#3c3c47;
   color:white;
+  position:relative;
+  z-index:100;
+  overflow: visible;
   .icon {
     background:darken(#34343f, 2%);
     width:50px;
@@ -99,28 +109,194 @@ a {
     &.active {
       color:#ffffff;
       box-sizing: border-box;
-      border-bottom:1px solid #67c29e;
+      border-bottom:1px solid $primaryTeal;
+      font-weight:400;
     }
+  }
+  .action-button {
+    position:relative;
+    top:50px;
   }
 }
 
 #area-graph {
-  background: linear-gradient(to top, #009bcc, #009bcc);
+  background: linear-gradient(to top, $primaryBlue, lighten($primaryBlue, 3%));
+  position:relative;
+  z-index:0;
   .graph {
     height:360px;
   }
   .y-axis {
     height:40px;
     width: 100%;
-    background:lighten(#009bcc, 3%);
-    color:white;
-    div {
-      margin:0px 3.2%;
+    background:lighten($primaryBlue, 7%);
+    color:lighten($primaryBlue, 63%);
+    > div {
+      margin:-15px 3.2% 0 3.2%;
+      text-align:center;
+      font-weight:400;
+      &:before {
+        content: "";
+        display:inline-block;
+        width: 1px ;
+        height: 10px ;
+        background:lighten($primaryBlue, 15%);
+        position:relative;
+      }
     }
 
   }
   #call-outs {
-    //background:lighten(#009bcc, 4%);
-    height:100px;
+    background:darken(#009bcc, 4%);
+    padding:0px 150px;
+    color:white;
+    text-align:center;
+    font-size:15px;
+    font-weight:300;
+    line-height:1.2;
+    > div {
+      border-left:1px lighten($primaryBlue, 5%) solid;
+      padding:15px 0px;
+      &:last-child {
+        border-right:1px lighten($primaryBlue, 5%) solid;
+      }
+      div {
+        font-weight:400;
+        font-size:40px;
+      }
+    }
   }
+}
+
+.action-button a {
+  color: $white;
+}
+
+.demo {
+  background:red;
+  height:200px;
+  div {
+    background:blue;
+    div {
+      background:yellow;
+    }
+  }
+}
+
+//colors
+
+.color-palette {
+  div {
+    height:50px;
+    color:white;
+  }
+}
+
+.color_gray_darks {
+  &--light {
+    background-color: lighten($darkGray, 10%);
+  }
+  &--lighter {
+    background-color: lighten($darkGray, 5%);
+  }
+  &--default {
+    background-color: $darkGray;
+  }
+  &--darker {
+    background-color: darken($darkGray, 5%);
+  }
+  &--dark {
+    background-color: darken($darkGray, 10%);
+  }
+}
+
+
+.color_blue {
+  &--light {
+    background-color: lighten($primaryBlue, 10%);
+  }
+  &--lighter {
+    background-color: lighten($primaryBlue, 5%);
+  }
+  &--default {
+    background-color: $primaryBlue;
+  }
+  &--darker {
+    background-color: darken($primaryBlue, 5%);
+  }
+  &--dark {
+    background-color: darken($primaryBlue, 10%);
+  }
+}
+
+.color_teal {
+  &--light {
+    background-color: lighten($primaryTeal, 10%);
+  }
+  &--lighter {
+    background-color: lighten($primaryTeal, 5%);
+  }
+  &--default {
+    background-color: $primaryTeal;
+  }
+  &--darker {
+    background-color: darken($primaryTeal, 5%);
+  }
+  &--dark {
+    background-color: darken($primaryTeal, 10%);
+  }
+}
+
+.color_gray_lights {
+  &--light {
+    background-color: lighten($lightGray, 10%);
+  }
+  &--lighter {
+    background-color: lighten($lightGray, 5%);
+  }
+  &--default {
+    background-color: $lightGray;
+  }
+  &--darker {
+    background-color: darken($lightGray, 5%);
+  }
+  &--dark {
+    background-color: darken($lightGray, 10%);
+  }
+}
+
+.color_orange {
+  &--light {
+    background-color: lighten($orange, 10%);
+  }
+  &--lighter {
+    background-color: lighten($orange, 5%);
+  }
+  &--default {
+    background-color: $orange;
+  }
+  &--darker {
+    background-color: darken($orange, 5%);
+  }
+  &--dark {
+    background-color: darken($orange, 10%);
+  }
+}
+
+.color_black--default {
+  background-color: darken($darkGray, 10%);
+  color:white;
+}
+
+.color_text--default {
+  background-color: darken($darkGray, 5%);
+  color:white;
+}
+
+.color_white--default {
+  background-color: $white;
+}
+
+.color_background--default {
+  background:lighten($darkGray, 60%);
 }
